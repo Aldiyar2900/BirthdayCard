@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
             MyApplicationTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    GreetingText(message = "Tugan kuninmen brat", from = "From brat")
+                    GreetingImage(message = "Tugan kuninmen brat", from = "From brat")
                 }
             }
         }
@@ -63,6 +63,13 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier){
         Image(
             painter = image,
             contentDescription = null
+        )
+        GreetingText(
+            message = message,
+            from = from,
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(8.dp)
         )
     }
 }
