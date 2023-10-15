@@ -18,9 +18,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.node.CanFocusChecker.end
+
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.FontWeight.Companion.Bold
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -81,10 +83,16 @@ fun Aldodada(name: String, email: String, number: String, modifier: Modifier = M
             Text(
                 text = email,
                 color = Color.White,
-                style = TextStyle(fontSize = 20.sp),
+                style = TextStyle(fontSize = 20.sp, fontWeight = FontWeight.Bold),
+                modifier = Modifier
+                    .align(Alignment.TopCenter)
+            )
+            Text(
+                text = number,
+                color = Color.White,
+                style = TextStyle(fontSize = 20.sp, fontWeight = FontWeight.Bold),
                 modifier = Modifier
                     .align(Alignment.Center)
-                    .padding(end: 30.dp)
             )
         }
 
